@@ -22,7 +22,7 @@ kick_theater <- read.csv(".\\data\\kickstarter_theater.csv")
 dashboardPage(skin = "black",
   dashboardHeader(title = span(tagList(icon("kickstarter-k")))),
   dashboardSidebar(
-    sidebarMenu(
+    sidebarMenu(style = "position: fixed",
       menuItem("Home", tabName = "home", icon = icon("home")),
       menuItem("Categories", tabName = "cats", icon = icon("kickstarter-k"),
         menuSubItem("art", tabName = "art", icon = icon("palette")),
@@ -70,6 +70,7 @@ dashboardPage(skin = "black",
           br(),
           br(),
           img(src="sub_cats.png", alt = "sub categories", height = 60),
+          selectizeInput("art_stat_1", "Sort by:", choices= c("successful","failed","canceled"),selected="successful"),
           br(),
           plotOutput("art_stat")
         ),
@@ -93,6 +94,7 @@ dashboardPage(skin = "black",
           br(),
           br(),
           img(src="sub_cats.png", alt = "sub categories", height = 60),
+          selectizeInput("comics_stat_1", "Sort by:", choices= c("successful","failed","canceled"),selected="successful"),
           br(),
           plotOutput("comics_stat")
 
@@ -118,6 +120,7 @@ dashboardPage(skin = "black",
           br(),
           img(src="sub_cats.png", alt = "sub categories", height = 60),
           br(),
+          selectizeInput("crafts_stat_1", "Sort by:", choices= c("successful","failed","canceled"),selected="successful"),
           plotOutput("crafts_stat")
 
         ),
@@ -141,6 +144,7 @@ dashboardPage(skin = "black",
           br(),
           br(),
           img(src="sub_cats.png", alt = "sub categories", height = 60),
+          selectizeInput("dance_stat_1", "Sort by:", choices= c("successful","failed","canceled"),selected="successful"),
           br(),
           plotOutput("dance_stat")
 
@@ -165,6 +169,7 @@ dashboardPage(skin = "black",
           br(),
           br(),
           img(src="sub_cats.png", alt = "sub categories", height = 60),
+          selectizeInput("design_stat_1", "Sort by:", choices= c("successful","failed","canceled"),selected="successful"),
           br(),
           plotOutput("design_stat")
 
@@ -189,6 +194,7 @@ dashboardPage(skin = "black",
           br(),
           br(),
           img(src="sub_cats.png", alt = "sub categories", height = 60),
+          selectizeInput("fashion_stat_1", "Sort by:", choices= c("successful","failed","canceled"),selected="successful"),
           br(),
           plotOutput("fashion_stat")
 
@@ -213,6 +219,7 @@ dashboardPage(skin = "black",
           br(),
           br(),
           img(src="sub_cats.png", alt = "sub categories", height = 60),
+          selectizeInput("film_stat_1", "Sort by:", choices= c("successful","failed","canceled"),selected="successful"),
           br(),
           plotOutput("film_stat")
 
@@ -237,6 +244,7 @@ dashboardPage(skin = "black",
           br(),
           br(),
           img(src="sub_cats.png", alt = "sub categories", height = 60),
+          selectizeInput("food_stat_1", "Sort by:", choices= c("successful","failed","canceled"),selected="successful"),
           br(),
           plotOutput("food_stat")
 
@@ -261,6 +269,7 @@ dashboardPage(skin = "black",
           br(),
           br(),
           img(src="sub_cats.png", alt = "sub categories", height = 60),
+          selectizeInput("games_stat_1", "Sort by:", choices= c("successful","failed","canceled"),selected="successful"),
           br(),
           plotOutput("games_stat")
 
@@ -285,6 +294,7 @@ dashboardPage(skin = "black",
           br(),
           br(),
           img(src="sub_cats.png", alt = "sub categories", height = 60),
+          selectizeInput("journalism_stat_1", "Sort by:", choices= c("successful","failed","canceled"),selected="successful"),
           br(),
           plotOutput("journalism_stat")
         ),
@@ -308,6 +318,7 @@ dashboardPage(skin = "black",
           br(),
           br(),
           img(src="sub_cats.png", alt = "sub categories", height = 60),
+          selectizeInput("music_stat_1", "Sort by:", choices= c("successful","failed","canceled"),selected="successful"),
           br(),
           plotOutput("music_stat")
 
@@ -332,6 +343,7 @@ dashboardPage(skin = "black",
           br(),
           br(),
           img(src="sub_cats.png", alt = "sub categories", height = 60),
+          selectizeInput("photography_stat_1", "Sort by:", choices= c("successful","failed","canceled"),selected="successful"),
           br(),
           plotOutput("photography_stat")
 
@@ -356,6 +368,7 @@ dashboardPage(skin = "black",
           br(),
           br(),
           img(src="sub_cats.png", alt = "sub categories", height = 60),
+          selectizeInput("publishing_stat_1", "Sort by:", choices= c("successful","failed","canceled"),selected="successful"),
           br(),
           plotOutput("publishing_stat")
 
@@ -380,6 +393,7 @@ dashboardPage(skin = "black",
           br(),
           br(),
           img(src="sub_cats.png", alt = "sub categories", height = 60),
+          selectizeInput("technology_stat_1", "Sort by:", choices= c("successful","failed","canceled"),selected="successful"),
           br(),
           plotOutput("technology_stat")
 
@@ -404,6 +418,7 @@ dashboardPage(skin = "black",
           br(),
           br(),
           img(src="sub_cats.png", alt = "sub categories", height = 60),
+          selectizeInput("theater_stat_1", "Sort by:", choices= c("successful","failed","canceled"),selected="successful"),
           br(),
           plotOutput("theater_stat")
 

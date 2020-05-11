@@ -49,7 +49,7 @@ shinyServer(function(input,output){
   
   output$art_stat <- renderPlot({
     kick_art %>%
-      ggplot(aes(x=reorder(sub_category,status == "successful",sum),fill = status))+
+      ggplot(aes(x=reorder(sub_category,status == input$art_stat_1,sum),fill = status))+
       geom_bar(position="stack")+ 
       scale_fill_manual(values = c("#424949", "#BDC3C7", "#05ce78"))+
       theme(legend.justification=c(0,1), 
@@ -89,7 +89,7 @@ shinyServer(function(input,output){
   
   output$comics_stat <- renderPlot({
     kick_comics %>%
-      ggplot(aes(x=reorder(sub_category,status == "successful",sum),fill = status))+
+      ggplot(aes(x=reorder(sub_category,status == input$comics_stat_1,sum),fill = status))+
       geom_bar(position="stack")+ 
       scale_fill_manual(values = c("#424949", "#BDC3C7", "#05ce78"))+
       theme(legend.justification=c(0,1), 
@@ -129,7 +129,7 @@ shinyServer(function(input,output){
 
   output$crafts_stat <- renderPlot({
     kick_crafts %>%
-      ggplot(aes(x=reorder(sub_category,status == "successful",sum),fill = status))+
+      ggplot(aes(x=reorder(sub_category,status == input$crafts_stat_1,sum),fill = status))+
       geom_bar(position="stack")+ 
       scale_fill_manual(values = c("#424949", "#BDC3C7", "#05ce78"))+
       theme(legend.justification=c(0,1), 
@@ -169,7 +169,7 @@ shinyServer(function(input,output){
   
   output$dance_stat <- renderPlot({
     kick_dance %>%
-      ggplot(aes(x=reorder(sub_category,status == "successful",sum),fill = status))+
+      ggplot(aes(x=reorder(sub_category,status == input$dance_stat_1,sum),fill = status))+
       geom_bar(position="stack")+ 
       scale_fill_manual(values = c("#424949", "#BDC3C7", "#05ce78"))+
       theme(legend.justification=c(0,1), 
@@ -209,7 +209,7 @@ shinyServer(function(input,output){
   
   output$design_stat <- renderPlot({
     kick_design %>%
-      ggplot(aes(x=reorder(sub_category,status == "successful",sum),fill = status))+
+      ggplot(aes(x=reorder(sub_category,status == input$design_stat_1,sum),fill = status))+
       geom_bar(position="stack")+ 
       scale_fill_manual(values = c("#424949", "#BDC3C7", "#05ce78"))+
       theme(legend.justification=c(0,1), 
@@ -249,7 +249,7 @@ shinyServer(function(input,output){
   
   output$fashion_stat <- renderPlot({
     kick_fashion %>%
-      ggplot(aes(x=reorder(sub_category,status == "successful",sum),fill = status))+
+      ggplot(aes(x=reorder(sub_category,status == input$fashion_stat_1,sum),fill = status))+
       geom_bar(position="stack")+ 
       scale_fill_manual(values = c("#424949", "#BDC3C7", "#05ce78"))+
       theme(legend.justification=c(0,1), 
@@ -289,7 +289,7 @@ shinyServer(function(input,output){
   
   output$film_stat <- renderPlot({
     kick_film %>%
-      ggplot(aes(x=reorder(sub_category,status == "successful",sum),fill = status))+
+      ggplot(aes(x=reorder(sub_category,status == input$film_stat_1,sum),fill = status))+
       geom_bar(position="stack")+ 
       scale_fill_manual(values = c("#424949", "#BDC3C7", "#05ce78"))+
       theme(legend.justification=c(0,1), 
@@ -329,7 +329,7 @@ shinyServer(function(input,output){
   
   output$food_stat <- renderPlot({
     kick_food %>%
-      ggplot(aes(x=reorder(sub_category,status == "successful",sum),fill = status))+
+      ggplot(aes(x=reorder(sub_category,status == input$food_stat_1,sum),fill = status))+
       geom_bar(position="stack")+ 
       scale_fill_manual(values = c("#424949", "#BDC3C7", "#05ce78"))+
       theme(legend.justification=c(0,1), 
@@ -369,7 +369,7 @@ shinyServer(function(input,output){
   
   output$games_stat <- renderPlot({
     kick_games %>%
-      ggplot(aes(x=reorder(sub_category,status == "successful",sum),fill = status))+
+      ggplot(aes(x=reorder(sub_category,status == input$games_stat_1,sum),fill = status))+
       geom_bar(position="stack")+ 
       scale_fill_manual(values = c("#424949", "#BDC3C7", "#05ce78"))+
       theme(legend.justification=c(0,1), 
@@ -409,7 +409,7 @@ shinyServer(function(input,output){
   
   output$journalism_stat <- renderPlot({
     kick_journalism %>%
-      ggplot(aes(x=reorder(sub_category,status == "successful",sum),fill = status))+
+      ggplot(aes(x=reorder(sub_category,status == input$journalism_stat_1,sum),fill = status))+
       geom_bar(position="stack")+ 
       scale_fill_manual(values = c("#424949", "#BDC3C7", "#05ce78"))+
       theme(legend.justification=c(0,1), 
@@ -449,7 +449,7 @@ shinyServer(function(input,output){
   
   output$music_stat <- renderPlot({
     kick_music %>%
-      ggplot(aes(x=reorder(sub_category,status == "successful",sum),fill = status))+
+      ggplot(aes(x=reorder(sub_category,status == input$music_stat_1,sum),fill = status))+
       geom_bar(position="stack")+ 
       scale_fill_manual(values = c("#424949", "#BDC3C7", "#05ce78"))+
       theme(legend.justification=c(0,1), 
@@ -489,7 +489,7 @@ shinyServer(function(input,output){
   
   output$photography_stat <- renderPlot({
     kick_photography %>%
-      ggplot(aes(x=reorder(sub_category,status == "successful",sum),fill = status))+
+      ggplot(aes(x=reorder(sub_category,status == input$photography_stat_1,sum),fill = status))+
       geom_bar(position="stack")+ 
       scale_fill_manual(values = c("#424949", "#BDC3C7", "#05ce78"))+
       theme(legend.justification=c(0,1), 
@@ -529,7 +529,7 @@ shinyServer(function(input,output){
   
   output$publishing_stat <- renderPlot({
     kick_publishing %>%
-      ggplot(aes(x=reorder(sub_category,status == "successful",sum),fill = status))+
+      ggplot(aes(x=reorder(sub_category,status == input$publishing_stat_1,sum),fill = status))+
       geom_bar(position="stack")+ 
       scale_fill_manual(values = c("#424949", "#BDC3C7", "#05ce78"))+
       theme(legend.justification=c(0,1), 
@@ -569,8 +569,8 @@ shinyServer(function(input,output){
   
   output$technology_stat <- renderPlot({
     kick_technology %>%
-      ggplot(aes(x=reorder(sub_category,status == "successful",sum),fill = status))+
-      geom_bar(position="stack")+ 
+      ggplot(aes(x=reorder(sub_category,status == input$technology_stat_1,sum),fill = status))+
+      geom_bar(position="stack") +
       scale_fill_manual(values = c("#424949", "#BDC3C7", "#05ce78"))+
       theme(legend.justification=c(0,1), 
             legend.position=c(0.85, 0.85),
@@ -609,8 +609,8 @@ shinyServer(function(input,output){
   
   output$theater_stat <- renderPlot({
     kick_theater %>%
-      ggplot(aes(x=reorder(sub_category,status == "successful",sum),fill = status))+
-      geom_bar(position="stack")+ 
+      ggplot(aes(x=reorder(sub_category,status == input$theater_stat_1,sum),fill = status))+
+      geom_bar(position="stack")+
       scale_fill_manual(values = c("#424949", "#BDC3C7", "#05ce78"))+
       theme(legend.justification=c(0,1), 
             legend.position=c(0.85, 0.85),
@@ -625,6 +625,10 @@ shinyServer(function(input,output){
     kickstarter %>%
       ggplot(aes(x=quarter,fill = status))+
       geom_bar(position="dodge")+ 
+      geom_text(aes(label=stat(count)),
+                stat='count', 
+                vjust=-0.25,
+                position = position_dodge(width = 1))+
       scale_fill_manual(values = c("#424949", "#BDC3C7", "#05ce78"))+
       theme(legend.justification=c(0,1), 
             legend.position=c(0.85, 0.85),
